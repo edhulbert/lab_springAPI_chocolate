@@ -21,14 +21,14 @@ public class Estate {
     @Column
     private String country;
 
-    @OneToMany
+    @OneToMany(mappedBy = "estate")
     @JsonIgnoreProperties({"estate"})
     private List<Chocolate> chocolates;
 
     public Estate(String name, String country) {
         this.name = name;
         this.country = country;
-        this.chocolates = new ArrayList<Chocolate>();
+        this.chocolates = new ArrayList<>();
     }
 
     public Estate() {

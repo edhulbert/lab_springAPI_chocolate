@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface ChocolateRepository extends JpaRepository<Chocolate, Long> {
 
+    // return all pets with
+    List<Chocolate> findChocolateByCocoaPercentage(int percentage);
 }
