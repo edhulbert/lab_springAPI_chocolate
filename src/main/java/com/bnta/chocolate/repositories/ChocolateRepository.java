@@ -10,5 +10,5 @@ import java.util.List;
 public interface ChocolateRepository extends JpaRepository<Chocolate, Long> {
 
     // return all pets with
-    List<Chocolate> findChocolateByCocoaPercentage(int percentage);
+    List<Chocolate> findChocolateByCocoaPercentageGreaterThan(int cocoaPercentage);
 }
